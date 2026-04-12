@@ -1,0 +1,298 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Ashiqul Hakim Khan | Digital Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Hind+Siliguri:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #00ff88; /* Cyber Green */
+            --bg-dark: #0a0a0c;
+            --card-bg: #161b22;
+            --text-main: #e6edf3;
+            --text-dim: #8b949e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', 'JetBrains Mono', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Background Animation */
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.05) 0%, transparent 80%);
+            z-index: -1;
+        }
+
+        nav {
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 12, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            letter-spacing: -1px;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #fff, var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            max-width: 700px;
+        }
+
+        .terminal-text {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 10%;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Volunteer List Scroll */
+        .journey-list {
+            height: 400px;
+            overflow-y: scroll;
+            padding-right: 15px;
+            border: 1px solid #30363d;
+            padding: 20px;
+            border-radius: 8px;
+            background: #0d1117;
+        }
+
+        .journey-list::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .journey-list::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 10px;
+        }
+
+        .journey-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #21262d;
+        }
+
+        .journey-item span {
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            display: block;
+        }
+
+        footer {
+            padding: 50px 10%;
+            text-align: center;
+            border-top: 1px solid #30363d;
+            color: var(--text-dim);
+        }
+
+        .social-icons a {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <nav>
+        <div class="logo">M.A.H. KHAN_</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#music">Music</a>
+            <a href="#social">Social Work</a>
+            <a href="#volunteer">Journey</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="terminal-text">> initializing_portfolio... success.</div>
+        <h1>Mohammad Ashiqul Hakim Khan</h1>
+        <p>সংগীতশিল্পী, প্রতিষ্ঠাতা (স্বপ্নবুনন ফাউন্ডেশন) এবং সাইবার সিকিউরিটি এনথুসিয়াস্ট। সুর আর সেবার মাধ্যমে আগামীর স্বপ্ন বুনি।</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Cyber Security & Tech</h3>
+                <p>সাইবার জগতের নিরাপত্তা এবং প্রযুক্তির নতুন উদ্ভাবন নিয়ে কাজ করতে ভালোবাসি। টেকনিক্যাল সমস্যার সমাধান এবং ডিজিটাল সুরক্ষা নিশ্চিত করাই আমার নেশা।</p>
+            </div>
+            <div class="card">
+                <h3>Karate & Discipline</h3>
+                <p>একজন কেরাতে মাস্টার হিসেবে আমি বিশ্বাস করি আত্মরক্ষা এবং শৃঙ্খলার শক্তিতে। শারীরিক ও মানসিক দৃঢ়তা আমার পথচলার শক্তি।</p>
+            </div>
+            <div class="card">
+                <h3>Personal Life</h3>
+                <p>অবসরে আমি ভ্রমণ করতে এবং ফটোগ্রাফি করতে পছন্দ করি। আমার দুই প্রিয় বিড়াল ব্রুক (Brook) এবং টুনটুন (Tuntun) আমার জীবনের অবিচ্ছেদ্য অংশ।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="music" style="background: #0d1117;">
+        <h2>Symphony of Khan</h2>
+        <p style="margin-bottom: 20px;">আমার সংগীতে খুঁজে পাবেন অল্টারনেটিভ রক এবং শেকড়ের সুরের মেলবন্ধন।</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Creative Content</h3>
+                <p>গানের লিরিক্স থেকে শুরু করে ভিডিও প্রোডাকশন—সবকিছুতেই চেষ্টা করি নতুন কিছু ফুটিয়ে তুলতে।</p>
+            </div>
+            <div class="card">
+                <h3>Vocal & Lyrics</h3>
+                <p>বাউল গানের আধ্যাত্মিকতা এবং আধুনিক রকের তীব্রতা—দুটিরই ছোঁয়া পাবেন আমার সৃষ্টিতে।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="social">
+        <h2>স্বপ্নবুনন ফাউন্ডেশন বাংলাদেশ</h2>
+        <div class="card" style="width: 100%;">
+            <h3>স্বপ্নবুনন পাঠশালা</h3>
+            <p>ময়মনসিংহ রেলওয়ে স্টেশনের পাশে সুবিধাবঞ্চিত শিশুদের শিক্ষার আলো পৌঁছে দিতে আমাদের এই মুক্ত পাঠশালা। বিনামূল্যে শিক্ষা এবং সুন্দর শৈশব নিশ্চিত করাই আমাদের মূল লক্ষ্য।</p>
+        </div>
+    </section>
+
+    <section id="volunteer">
+        <h2>Volunteer Journey</h2>
+        <div class="journey-list">
+            <div class="journey-item">
+                <span>March 10, 2023</span>
+                <strong>Sopnobunon Foundation Bangladesh:</strong> Volunteer.
+            </div>
+            <div class="journey-item">
+                <span>March 31, 2024</span>
+                <strong>Snake Rescue Team Bangladesh:</strong> Member.
+            </div>
+            <div class="journey-item">
+                <span>January 1, 2023</span>
+                <strong>UNICEF Bangladesh:</strong> Volunteer.
+            </div>
+             <div class="journey-item">
+                <span>April 18, 2023</span>
+                <strong>JAAGO Foundation:</strong> Volunteer.
+            </div>
+            <p style="color: var(--text-dim); font-size: 0.8rem;">...এবং আরও ৩৫+ সামাজিক সংগঠনের সাথে সম্পৃক্ততা।</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p style="margin-bottom: 20px;">সরাসরি যোগাযোগ করতে পারেন: ashiqulkhan@email.com</p>
+        <div class="social-icons">
+            <a href="#">FB</a>
+            <a href="#">YT</a>
+            <a href="#">GH</a>
+        </div>
+        <p style="margin-top: 30px; font-size: 0.8rem;">© 2026 M.A.H. Khan | Built with Passion in Mymensingh</p>
+    </footer>
+
+</body>
+</html>
+
+```
